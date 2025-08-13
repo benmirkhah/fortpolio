@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" viewBox="0 0 800 600" width="100%">
+  <defs>
+    <radialGradient id="tvrg" gradientUnits="userSpaceOnUse" cx="400" cy="300" r="400">
+      <stop offset="0"    stop-color="gray"      stop-opacity="0.50" />
+      <stop offset="0.25" stop-color="gray"      stop-opacity="0.33" />
+      <stop offset="0.66" stop-color="black"     stop-opacity="0.15" />
+      <stop offset="0.85" stop-color="black"     stop-opacity="0.00" />
+    </radialGradient>
+  </defs>
+  <rect fill="url(#tvrg)" x="0" y="0" width="800" height="600" transform-origin="center center" />
+  <animateTransform begin="0s"   dur="0.1s" attributeName="transform" type="scale" from="1 1.0" to="1 0.1" repeatCount="1" />
+  <animateTransform begin="0.1s" dur="0.1s" attributeName="transform" type="scale" from="1 0.1" to="0 0.0" repeatCount="1" />
+  <animateTransform begin="0.2s" dur="1.8s" attributeName="transform" type="scale" from="0 0.0" to="0 0.1" repeatCount="1" />
+</svg>

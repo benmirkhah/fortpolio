@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="gold" viewBox="0 0 2000 2000">
+  <style>   
+    :root {
+      --uwht: hsl(  0, 1%,99%);  --xwht: hsl(  0, 1%,95%);  --lwht: hsl(  0, 1%,90%);  --mwht: hsl(  0, 1%,85%);  --dwht: hsl(  0, 1%,80%);  --bwht: hsl(  0, 1%,75%);  --kwht: hsl(  0, 1%,70%);
+      --ugry: hsl(  0, 1%,65%);  --xgry: hsl(  0, 1%,60%);  --lgry: hsl(  0, 1%,55%);  --mgry: hsl(  0, 1%,50%);  --dgry: hsl(  0, 1%,45%);  --bgry: hsl(  0, 1%,40%);  --kgry: hsl(  0, 1%,35%);
+      --ublk: hsl(  0, 1%,30%);  --xblk: hsl(  0, 1%,25%);  --lblk: hsl(  0, 1%,20%);  --mblk: hsl(  0, 1%,15%);  --dblk: hsl(  0, 1%,10%);  --bblk: hsl(  0, 1%, 5%);  --kblk: hsl(  0, 1%, 0%);
+      --udev: hsl(225,90%,85%);  --xdev: hsl(225,90%,70%);  --ldev: hsl(225,90%,55%);  --mdev: hsl(225,90%,45%);  --ddev: hsl(225,90%,35%);  --bdev: hsl(225,90%,25%);  --kdev: hsl(225,90%,15%);
+      --ures: hsl( 80,90%,75%);  --xres: hsl( 80,90%,55%);  --lres: hsl( 80,90%,45%);  --mres: hsl( 80,90%,35%);  --dres: hsl( 80,90%,25%);  --bres: hsl( 80,90%,15%);  --kres: hsl( 80,90%,10%);
+      --uart: hsl(280,60%,85%);  --xart: hsl(280,60%,65%);  --lart: hsl(280,60%,55%);  --mart: hsl(280,60%,45%);  --dart: hsl(280,60%,35%);  --bart: hsl(280,60%,25%);  --kart: hsl(280,60%,15%);
+      --uadv: hsl(  0,65%,80%);  --xadv: hsl(  0,65%,60%);  --ladv: hsl(  0,65%,50%);  --madv: hsl(  0,65%,40%);  --dadv: hsl(  0,65%,30%);  --badv: hsl(  0,65%,20%);  --kadv: hsl(  0,65%,15%);
+      --uint: hsl( 25,99%,80%);  --xint: hsl( 25,99%,60%);  --lint: hsl( 25,99%,50%);  --mint: hsl( 25,99%,40%);  --dint: hsl( 25,99%,30%);  --bint: hsl( 25,99%,20%);  --kint: hsl( 25,99%,15%);
+      --usun: hsl( 50,99%,80%);  --xsun: hsl( 50,99%,70%);  --lsun: hsl( 50,99%,60%);  --msun: hsl( 50,99%,50%);  --dsun: hsl( 50,99%,40%);  --bsun: hsl( 50,99%,30%);  --ksun: hsl( 50,99%,15%);
+      --udep: hsl(262,65%,70%);  --xdep: hsl(262,65%,60%);  --ldep: hsl(262,65%,50%);  --mdep: hsl(262,65%,40%);  --ddep: hsl(262,65%,30%);  --bdep: hsl(262,65%,20%);  --kdep: hsl(262,65%,15%);
+    }
+  </style>
+   <filter id="displacement">
+    <feTurbulence baseFrequency="0.025" seed="1000" result="turbulence" />
+    <feDisplacementMap
+      in2="turbulence"
+      in="SourceGraphic"
+      scale="25"
+      xChannelSelector="R"
+      yChannelSelector="G"
+    />
+  </filter> 
+  <defs>
+    <!--Red & Gold-->
+    <linearGradient id="rnglg" gradientUnits="userSpaceOnUse" x1="1000" y1="0" x2="1000" y2="2000">
+      <stop offset="0"    stop-color="red"  stop-opacity="0"/>
+      <stop offset="0.33" stop-color="red"  stop-opacity="0.66"/>
+      <stop offset="1"    stop-color="gold" stop-opacity="1"/>
+    </linearGradient>
+    <!--Light Mode (Black on White)-->
+    <radialGradient id="bnwrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"   stop-color="var(--mwht)"/>
+      <stop offset="0.5" stop-color="var(--xwht)"/>
+      <stop offset="1"   stop-color="var(--xgry)"/>
+    </radialGradient>
+    <!--Sunny Mode (Black on Yellow)-->
+    <radialGradient id="sunrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"    stop-color="var(--usun)" stop-opacity="0.33"/>
+      <stop offset="0.15" stop-color="var(--xsun)" stop-opacity="0.50"/>
+      <stop offset="0.35" stop-color="var(--lsun)" stop-opacity="0.66"/>
+      <stop offset="0.65" stop-color="var(--xdev)" stop-opacity="0.75"/>
+      <stop offset="1"    stop-color="var(--udev)" stop-opacity="0.85"/>
+    </radialGradient>
+    <!--Depeche Mode (White on Purple)-->
+    <radialGradient id="deprg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"    stop-color="var(--kdep)"/>
+      <stop offset="0.35" stop-color="var(--bdep)"/>
+      <stop offset="0.65" stop-color="var(--ddep)"/>
+      <stop offset="1"    stop-color="var(--kdep)"/>
+    </radialGradient>
+    <!--Dark Mode (White on Black)-->
+    <radialGradient id="wnbrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"    stop-color="var(--dblk)"/>
+      <stop offset="0.5"  stop-color="var(--mblk)"/>
+      <stop offset="1"    stop-color="var(--xblk)"/>
+    </radialGradient>
+    <!--Intro page-->
+    <radialGradient id="intrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"    stop-color="var(--bint)"/>
+      <stop offset="0.35" stop-color="var(--dint)"/>
+      <stop offset="0.65" stop-color="var(--mint)"/>
+      <stop offset="1"    stop-color="var(--mint)"/>
+    </radialGradient>
+    <!--Developer-->
+    <radialGradient id="devrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"   stop-color="var(--ddev)"/>
+      <stop offset="0.8" stop-color="var(--mdev)"/>
+      <stop offset="1"   stop-color="var(--ldev)"/>
+    </radialGradient>
+    <!--Researcher-->
+    <radialGradient id="resrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"   stop-color="var(--dres)"/>
+      <stop offset="0.8" stop-color="var(--mres)"/>
+      <stop offset="1"   stop-color="var(--lres)"/>
+    </radialGradient>
+    <!--Artist-->
+    <radialGradient id="artrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"   stop-color="var(--dart)"/>
+      <stop offset="0.8" stop-color="var(--mart)"/>
+      <stop offset="1"   stop-color="var(--lart)"/>
+    </radialGradient>
+    <!--Advocate-->
+    <radialGradient id="advrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="2000">
+      <stop offset="0"   stop-color="var(--dadv)"/>
+      <stop offset="0.8" stop-color="var(--madv)"/>
+      <stop offset="1"   stop-color="var(--ladv)"/>
+    </radialGradient>
+    <!--Gradients for the circles-->
+    <radialGradient id="twrg" gradientUnits="userSpaceOnUse" cx="1000" cy="900" r="900">
+      <stop offset="0" stop-color="white" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mwlg" gradientUnits="userSpaceOnUse" x1="1000" y1="0" x2="1000" y2="600">
+      <stop offset="0" stop-color="white" stop-opacity="0"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="bbrg" gradientUnits="userSpaceOnUse" cx="1000" cy="2000" r="1000">
+      <stop offset="0" stop-color="black" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="black" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cbrg" gradientUnits="userSpaceOnUse" cx="1000" cy="600" r="1000">
+      <stop offset="0" stop-color="black" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="black" stop-opacity="0.05"/>
+    </radialGradient>
+    <radialGradient id="cwrg" gradientUnits="userSpaceOnUse" cx="1000" cy="1000" r="1000">
+      <stop offset="0" stop-color="white" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.05"/>
+    </radialGradient>
+  </defs>
+
+  <symbol id="bgbox" viewBox="0 0 2000 2000"><rect width="2000" height="2000" /></symbol>
+
+  <symbol id="circles" viewBox="0 0 2000 2000" fill-opacity="0.5" stroke-width="1" >
+    <g id="lotus" stroke="white" stroke-opacity="0.25">
+      <circle fill="url(#twrg)" cx="1000" cy="-340" r="1050"/>
+      <circle fill="url(#mwlg)" cx="580"  cy="-405" r="1190"/>
+      <circle fill="url(#mwlg)" cx="1420" cy="-405" r="1190"/>
+    </g>
+    <g id="top-circles" stroke="white" stroke-opacity="0.25">
+      <g id="left-top-circles" transform-origin="left center" fill="url(#cwrg)">
+        <circle cx="-510" cy="-600" r="2000"/>
+        <circle cx="-510" cy="-600" r="1750"/>
+        <circle cx="-510" cy="-600" r="1500"/>
+        <circle cx="-510" cy="-600" r="1265"/>
+        <animateTransform begin="1s" dur="1.5s" attributeName="transform" type="rotate" from="0" to="-360" repeatCount="1"/>
+      </g>  
+      <g id="right-top-circles" transform-origin="right center" fill="url(#cwrg)">
+        <circle cx="2510" cy="-600" r="2000"/>
+        <circle cx="2510" cy="-600" r="1750"/>
+        <circle cx="2510" cy="-600" r="1500"/>
+        <circle cx="2510" cy="-600" r="1265"/>
+        <animateTransform begin="1s" dur="1.5s" attributeName="transform" type="rotate" from="0" to="360" repeatCount="1"/>
+      </g>
+    </g>
+
+    <g id="bottom-circles" stroke="black" stroke-opacity="0.15">
+      <g id="left-bottom-circles" transform-origin="left bottom" fill="url(#cbrg)">
+        <circle cx="-510" cy="2600" r="2005"/>
+        <circle cx="-510" cy="2600" r="1750"/>
+        <circle cx="-510" cy="2600" r="1500"/>
+        <circle cx="-510" cy="2600" r="1265"/>
+        <animateTransform begin="1s" dur="1.5s" attributeName="transform" type="rotate" from="0" to="-360" repeatCount="1"/>
+      </g>
+      <g id="right-bottom-circles" transform-origin="right bottom" fill="url(#cbrg)">
+        <circle cx="2510" cy="2600" r="2005"/>
+        <circle cx="2510" cy="2600" r="1750"/>
+        <circle cx="2510" cy="2600" r="1500"/>
+        <circle cx="2510" cy="2600" r="1265"/>
+        <animateTransform begin="1s" dur="1.5s" attributeName="transform" type="rotate" from="0" to="360" repeatCount="1"/>
+      </g>
+    </g>             
+  </symbol>
+ 
+  <symbol id="intsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#intrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="devsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#devrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="ressym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#resrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="artsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#artrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="advsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#advrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="bnwsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#bnwrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="wnbsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#wnbrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="sunsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#sunrg)"></use><use href="#circles"></use></symbol>
+  <symbol id="depsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#deprg)"></use><use href="#circles"></use></symbol>
+  <symbol id="rngsym" viewBox="0 0 2000 2000"><use href="#bgbox" fill="url(#rnglg)" fill-opacity="0.85"></use><use href="#circles"></use></symbol>
+
+  <view id="intbg" viewBox="0 0     2000 2000" /><use href="#intsym" x="0" y="0"    ></use>
+  <view id="devbg" viewBox="0 2000  2000 2000" /><use href="#devsym" x="0" y="2000" ></use>
+  <view id="resbg" viewBox="0 4000  2000 2000" /><use href="#ressym" x="0" y="4000" ></use>
+  <view id="artbg" viewBox="0 6000  2000 2000" /><use href="#artsym" x="0" y="6000" ></use>
+  <view id="advbg" viewBox="0 8000  2000 2000" /><use href="#advsym" x="0" y="8000" ></use>
+  <view id="bnwbg" viewBox="0 10000 2000 2000" /><use href="#bnwsym" x="0" y="10000"></use>
+  <view id="wnbbg" viewBox="0 12000 2000 2000" /><use href="#wnbsym" x="0" y="12000"></use>
+  <view id="sunbg" viewBox="0 14000 2000 2000" /><use href="#sunsym" x="0" y="14000"></use>
+  <view id="depbg" viewBox="0 16000 2000 2000" /><use href="#depsym" x="0" y="16000"></use>
+  <view id="rngbg" viewBox="0 20000 2000 2000" /><use href="#rngsym" x="0" y="20000"></use>
+</svg>

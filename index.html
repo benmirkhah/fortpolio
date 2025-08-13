@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Ben Mirkhah, Director of Web Operations</title>
+  <!-- <link rel="preload"        href="bg-v7.svg" as="image" type="image/svg+xml" crossorigin /> -->
+  <link rel="stylesheet"     href="index.css" type="text/css" />
+  <link rel="preconnect"     href="https://files.benmirkhah.com" crossorigin />
+  <link rel="preconnect"     href="https://media.benmirkhah.com" crossorigin />
+  <link rel="icon"           href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAACbUlEQVRIx7WUsU/qUBTGv96WSlWeEBZijJggxrREdwYixMnByYEyOvgfsBAMG0xuDsZ/QGc3NDFhgTioiYsmkhBYGLSBkLYR0va8gSjvQXiIT7/l5ibfOd/v3pN7gSmVSMTj8ThRfzdYk8lkMpl83/+AVFVVVXU0eHiVJEmSpB8DIcpkMplsdhCYz+fzhQJROBwOh8PDQN+oQCAQCASIRFEURZHI45GkP0/e7Xa73e70AMJnjel0Op1OA6oaDB4eAkAw6PcDvZ5t6zrw/Hx2trAw/cHYZ426ruu6DtzcGEYuBzQa19etFvD4WKtls4AoRqMPDwBjjLGPrt84ilgsFovF6EOapmmaRiP6O/jbAIguL4vFYpHGqlKpVCoVomq1Wq1Wibxer9fn+w+Q9+cUiUQikQhNrfdgWZZlWf4yyGhj27Zt254MUK/X6/X6F0aiKIqiKIOCYRmGYRjGZADLsizLIgqFQqHV1SkAnp5OTn79ItK0qyuPZ7SxaZqmaU4GKJfPzxmbfAPc/f3pqaIQLS8vLtZqgOP0bYyJoiAARC5Xrwf4/Vtbb2+Th1YqlUqlErC01GgkEkCz2WxyHLC+LsuiCAiCJLlcgM+3vd3pcBzXaJTLR0dEs7Ptdv+D4TiOG/A6DsBxQKvV621sAGtru7vl8ngAjuvXv7xcXIgiwNjMjCj2h+k4fQfPA4LA8xwHCO323V2hABiG223bwPy8xwMAbvfcHGMAY32j47y+3t4OAsZpZ2dzEwAsy7IcBxAExhwHMIxOx3GAlZVUyjT/1WFIudzenstFlEpFo9M8o+Pj/X2eJzo4SCR4fnzdb2N4Pyv9cduVAAAAAElFTkSuQmCC" type="image/x-icon" />
+  <meta name="viewport"      content="width=device-width, initial-scale=1" />
+  <meta name="description"   content="Ben Mirkhah builds ultra high perfomance enterprise level online solutions." />
+  <meta name="robots"        content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+  <meta name="twitter:card"  content="summary_large_image" />
+  <meta name="twitter:title" content="Ben Mirkhah, Solutions Architect" />
+  <meta name="twitter:site"  content="@drupalati" />
+  <meta name="twitter:image" content="https://media.benmirkhah.com/benmirkhah.webp?v2" />
+  <meta property="og:title"  content="Ben Mirkhah" />
+  <meta property="og:type"   content="website" />
+  <meta property="og:url"    content="https://www.benmirkhah.com" />
+  <meta property="og:image"  content="https://media.benmirkhah.com/benmirkhah.webp?v2" />
+  <style>
+
+  </style>
+</head>
+
+<body id="benmirkhah">
+  <section id="sec-intro" class="int cat" data-secid="int"><!---🏠SWEET🏠---->
+    <main>
+      <h1>BEN WHO?</h1>
+      <div id="line"></div>
+      <menu class="linx">
+        <li class="dev"><a href="#developer">Developer  </a></li>
+        <li class="res"><a href="#research" >Researcher </a></li>
+        <li class="art"><a href="#artist"   >Artist     </a></li>
+        <li class="adv"><a href="#advocate" >Advocate   </a></li>
+      </menu>      
+      <div class="blurb">
+        <p><b>Welcome.</b> <i>Here to get to know me? Let me help!</i></p>
+        <p>I'm known for building <i>software <b>solutions</b>.</i></p>
+        <p>I obsess over <i><b>performance</b> optimization.</i></p>
+        <p>I compile embedded <i><b>Linux</b> kernels for fun.</i></p>
+        <p>I've managed people, <b>infrastructure</b>, <i>content, projects, and budgets.</i></p>
+        <p>I'm <b>extroverted</b>, and despite all this propaganda, <i><b>humble</b> by nature.</i></p>
+      </div>
+      <div id="debug" class="hide"></div>
+    </main><!---------------------------------------------------------/Intro-->
+  </section>
+  <div id="selectmode" class="selector"><!--------------⚪️🟡🟠🔴🟢🔵🟣⚫️-->
+    <input type="checkbox" id="light-mode" name="mode-selector" value="light" onchange="updateMode(value);"/>
+    <label for="light-mode"  ><i>⚪️</i><code>Light Mode</code></label>
+    <input type="checkbox" id="sunny-mode" name="mode-selector" value="sunny" onchange="updateMode(value);"/>
+    <label for="sunny-mode"  ><i>🟡</i><code>Sunny Mode</code></label>
+    <input type="checkbox" id="color-mode" name="mode-selector" value="color" onchange="updateMode(value);" checked/>
+    <label for="color-mode"  ><i><div class="colorwheel"></div></i><code>Color Mode</code></label>
+    <input type="checkbox" id="depeche-mode" name="mode-selector" value="depeche" onchange="updateMode(value);"/>
+    <label for="depeche-mode"><i>🟣</i><code>Depeche Mode</code></label>
+    <input type="checkbox" id="dark-mode"  name="mode-selector" value="dark" onchange="updateMode(value);"/>
+    <label for="dark-mode"   ><i>⚫️</i><code>Dark Mode</code></label>
+  </div>
+  <!------------------------------------------------------------🛠️Developer--->
+  <div class="DEVELOPER">
+    <cat-section
+      id       = "developer"
+      cat      = "dev"
+      name     = "Developer"
+      emoji    = "🛠️"
+      emojihex = "&#x1F6E0;&#xFE0F;"
+      heading  = "Director of Web Operations"
+      linx     = '[ ["Skills" ,"#skills" ] , ["Projects","#projects"] , 
+                    ["Designs","#designs"] , ["Resume","/resume.pdf"] ]'
+      boxtype  = "blurb withbox mt2"
+    ></cat-section><!--/cat-developer-->
+
+    <sub-section
+      id       = "skills"
+      cat      = "dev"
+      name     = "Developer"
+      emoji    = "🛠️"
+      heading  = "My Skillset"
+      boxtype  = "blurb"
+    ></sub-section><!--/sub-skills-->
+
+    <sub-section
+      id       = "projects"
+      cat      = "dev"
+      name     = "Developer"
+      emoji    = "🛠️"
+      heading  = "My Projects List"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-projects-->
+
+    <sub-section
+      id       = "designs"
+      cat      = "dev"
+      name     = "Developer"
+      emoji    = "🛠️"
+      heading  = "Site Designs"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-designs-->
+  </div><!--/DEVELOPER-->
+  <!------------------------------------------------------------📖️Researcher-->
+  <div class="RESEARCHER">
+    <cat-section
+      id       = "research"
+      cat      = "res"
+      name     = "Researcher"
+      emoji    = "📖️"
+      emojihex = "&#128214;&#xFE0F;"
+      heading  = "Never Ending Quest"
+      linx     = '[ ["IoT","#iot"] , ["Mind","#mind"] , ["Chemistry","#chem"] ]'
+    ></cat-section><!--/cat-research-->  
+
+    <sub-section
+      id       = "iot"
+      cat      = "res"
+      name     = "Research"
+      emoji    = "📖️"
+      heading  = "IoT & Micro Devices"
+      boxtype  = "blurb"
+    ></sub-section><!--/sub-iot-->
+
+    <sub-section
+      id       = "mind"
+      cat      = "res"
+      name     = "Research"
+      emoji    = "📖️"
+      heading  = "Awareness & Wisdom"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-mind-->
+
+    <sub-section
+      id       = "chem"
+      cat      = "res"
+      name     = "Research"
+      emoji    = "📖️"
+      heading  = "Medicinal Chemistry"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-chem-->
+  </div><!--/RESEARCHER-->
+  <!------------------------------------------------------------🎨Artist------>
+  <div class="ARTIST">
+    <cat-section
+      id       = "artist"
+      cat      = "art"
+      name     = "Artist"
+      emoji    = "🎨"
+      emojihex = "&#x1F3A8;&#xFE0F;"
+      heading  = "Multi Disciplinary / Mixed Media"
+      linx     = '[ ["Visual","#visual"] , ["Tactile","#tactile"] , ["Vocal","#vocal"] ]'
+    ></cat-section><!--/cat-artist-->
+
+    <sub-section
+      id       = "visual"
+      cat      = "art"
+      name     = "Visual"
+      emoji    = "🎨"
+      heading  = "Paintings & Illustrations"
+      boxtype  = "blurb"
+    ></sub-section><!--/sub-vicual-->
+
+    <sub-section
+      id       = "tactile"
+      cat      = "art"
+      name     = "Tactile"
+      emoji    = "🎨"
+      heading  = "DIY Builds & Crafts"
+      boxtype  = "blurb"
+    ></sub-section><!--/sub-tactile-->
+
+    <sub-section
+      id       = "vocal"
+      cat      = "art"
+      name     = "Vocal"
+      emoji    = "🎨"
+      heading  = "Music & Recordings"
+      boxtype  = "blurb"
+    ></sub-section><!--/sub-vocal-->
+  </div><!--/ARTIST-->
+  <!------------------------------------------------------------📢Advocate---->
+  <div class="ADVOCATE">
+    <cat-section
+      id       = "advocate"
+      cat      = "adv"
+      name     = "Advocate"
+      emoji    = "📢"
+      emojihex = "&#x1F4E2;&#xFE0F;"
+      heading  = "Spreading Truth"
+      linx     = '[ ["SVG"    ,"#svg"] , ["Performance","#speed"] , 
+                    ["Freedom","#freedom"] , ["Random","#random"] ]'
+    ></cat-section><!--/cat-advocate-->
+
+    <sub-section
+      id       = "svg"
+      cat      = "adv"
+      name     = "Advocate"
+      emoji    = "📢"
+      heading  = "Scalable Vector Graphics"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-svg-->
+
+    <sub-section
+      id       = "speed"
+      cat      = "adv"
+      name     = "Advocate"
+      emoji    = "📢"
+      heading  = "Speed & Performance"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-speed-->
+
+    <sub-section
+      id       = "freedom"
+      cat      = "adv"
+      name     = "Advocate"
+      emoji    = "📢"
+      heading  = "Personal Freedom"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-freedom-->
+
+    <sub-section
+      id       = "random"
+      cat      = "adv"
+      name     = "Advocate"
+      emoji    = "📢"
+      heading  = "Random Fun"
+      boxtype  = "wideblurb"
+    ></sub-section><!--/sub-random-->
+  </div><!--/ADVOCATE-->
+  <!-----------------------------------------------------------Utility-Tools-->
+  <div class="UTILITY">
+
+    <div id="modal"><!----------------------------------------Modal-Lightbox-->
+      <div class="innerbox">
+        <div id="modal-prev" class="invis" data-total="0" data-code="0" data-src="0" onclick="isopen=0; modal(this);">👈</div>
+        <h5  id="modal-title">PHOTO</h5>
+        <div id="modal-next" class="invis" data-total="0" data-code="0" data-src="0" onclick="isopen=0; modal(this);">👉</div>
+        <img id="modal-img" src="https://media.benmirkhah.com/benmirkhah.webp" alt="BEN WHO?" loading="lazy" onclick="modal(this);" />
+        <p   id="modal-caption" class="white">Click on image to close.</p>
+      </div>
+    </div><!--/modal-->
+    
+    <div id="menubar"><!--------------------------------------------Menu-Bar-->
+      <menu id="clix" class="none">
+        <li><a id="intbtn" class="intlink clixlia" href="#"          alt="🏠 Home"      ><i>&#127968;&#xFE0F;</i></a></li>
+        <li><a id="devbtn" class="devlink clixlia" href="#developer" alt="🛠️ Developer" ><i>&#x1F6E0;&#xFE0F;</i></a></li>
+        <li><a id="resbtn" class="reslink clixlia" href="#research"  alt="📖️ Researcher"><i>&#128214;&#xFE0F;</i></a></li>
+        <li><a id="artbtn" class="artlink clixlia" href="#artist"    alt="🎨 Artist"    ><i>&#x1F3A8;&#xFE0F;</i></a></li>
+        <li><a id="advbtn" class="advlink clixlia" href="#advocate"  alt="📢 Advocate"  ><i>&#x1F4E2;&#xFE0F;</i></a></li>
+      </menu>
+    </div><!--/menubar-->
+
+  </div><!--/UTILITY-->
+  <!----------------------------------------------------------Hidden-Content-->
+  <div class="HIDDEN" style="display: none;">
+
+    <div id="developer-text">
+      <h4>Want 20+ years of IT experience?</h4>
+      <p class="pt0">Good news, my resume is condensed, 
+        <i>but all the granular details</i> of my career 
+        <i>are still available on <a href="https://linkedin.com/in/benmirkhah" target="new">LinkedIn</a>.</i>
+        <i>Lastly, I'm on <a href="https://x.com/drupalati" target="new">Twitter</a>.</i>
+      </p>
+    </div><!--/developer-text-->
+
+    <div id="skills-text">
+      <h4>What am I good at?</h4>
+      <p class="mb2">
+        Here are ten skills I'm known for in my career...
+        <ul>
+          <li><em>Optimizing performance</em> and <i>enhancing page load speeds.</i></li>
+          <li>Internationalization, localization, <i>or <em>personalization</em> of any website.</i></li>
+          <li>Implementing <em>eCommerce</em> systems <i>to sell physical or digital goods online.</i></li>
+          <li>Building scalable enterprise level <i><em>Content Management Systems</em></i> <i>for large sums of content.</i></li>
+          <li><em>Integration</em> of various corporate tools <i>(Saleforce / Marketo / AWS / etc.).</i></li>
+          <li>Creating complex forms for <i><em>data gathering and reporting.</em>.</i></li>
+          <li>Implementation of various <i><em>Single-Sign-On</em> solutions.</i></li>
+          <li>Developing <em>dashboards</em> and <i><em>visualization tools</em>.</i></li>
+          <li>Embedded software development for <i>interfacing <em>custom hardware</em>.</i></li>
+          <li>Beefing up <em>online security</em> of any site.</li>
+        </ul>
+      </p>
+    </div><!--/skill-text-->
+
+    <div id="projects-text">
+      <h4>All my work so far</h4>
+      <p class="mb2">Throughout years, I've build, maintained, configured,
+        improved and contributed to many projects for my clients,
+        employers, and community. Some are still thriving, some can 
+        only be seen on the internet archives, and I got screenshots 
+        for the few remaining that weren't archived well.  
+      </p>
+      <div class="container">
+        <div class="foldable" data-group="projects"><!----------------Active-->
+          <div class="summary">Active sites</div>
+          <div class="noverflow details">
+            <p class="mt2 mb2">Still online, maintained, and available:</p>
+            <ol>
+              <li><a data-year="2015" href="https://allianceforchildwelfare.org" target="_blank">Alliance For Child Welfare</a></li>
+              <li><a data-year="2000" href="https://www.aol.com"                 target="_blank">America Online Corporation</a></li>
+              <li><a data-year="2000" href="https://www.answersetc.com"          target="_blank">Answers etc.</a></li>
+              <li><a data-year="2013" href="https://www.antarcticacapital.com"   target="_blank">Antarctica Capital</a></li>
+              <li><a data-year="2019" href="https://www.apptio.com"              target="_blank">Apptio, an IBM company</a></li>
+              <li><a data-year="2003" href="https://www.artnet.com"              target="_blank">ArtNet</a></li>
+              <li><a data-year="2006" href="https://www.bionexus.net"            target="_blank">Bionexus Inc.</a></li>
+              <li><a data-year="2015" href="https://www.cityartsmagazine.com"    target="_blank">CityArts Magazine</a></li>
+              <li><a data-year="2016" href="https://www.defender.org"            target="_blank">Defender.org</a></li>
+              <li><a data-year="2009" href="https://www.drivers.com"             target="_blank">Drivers.com</a></li>
+              <li><a data-year="2009" href="https://www.doctornik.com"           target="_blank">Dr. Nik's Children Dentistry</a></li>
+              <li><a data-year="2015" href="https://www.gfoa.org"                target="_blank">Government Finance Officers Association</a></li>
+              <li><a data-year="2013" href="https://www.hoover.org"              target="_blank">Hoover Institute</a></li>
+              <li><a data-year="2013" href="https://www.joc.com"                 target="_blank">Journal of Commerce</a></li>
+              <li><a data-year="2001" href="https://leakeyfoundation.org"        target="_blank">Leakey Foundation</a></li>
+              <li><a data-year="2015" href="https://www.meadowlarknm.com"        target="_blank">Meadow Lark Apartments</a></li>
+              <li><a data-year="2010" href="https://www.nabavilaw.com"           target="_blank">Nabavi Law Firm</a></li>
+              <li><a data-year="2006" href="https://www.neocasesoftware.com"     target="_blank">Neocase Software</a></li>
+              <li><a data-year="2010" href="https://www.nicorlighting.com"       target="_blank">Nicor Lighting</a></li>
+              <li><a data-year="2013" href="https://www.woub.org"                target="_blank">Ohio University Communication College</a></li>
+              <li><a data-year="2009" href="https://www.phoenix.com"             target="_blank">Phoenix Technologies</a></li>
+              <li><a data-year="2015" href="https://programminglibrarian.org"    target="_blank">Programming Librarian</a></li>
+              <li><a data-year="2015" href="https://www.puertadelsolnm.com"      target="_blank">Puerta del Sol Apartments</a></li>
+              <li><a data-year="2003" href="https://www.risinglight.com"         target="_blank">Rising Light</a></li>
+              <li><a data-year="2016" href="https://www.sts.org"                 target="_blank">Society of Thoracic Surgeons</a></li>
+              <li><a data-year="2009" href="https://www.sonatype.com"            target="_blank">Sonatype</a></li>
+              <li><a data-year="2010" href="https://www.tirgan.ca"               target="_blank">Tirgan Festival</a></li>
+              <li><a data-year="2013" href="https://www.tintri.com"              target="_blank">Tintri</a></li>
+              <li><a data-year="2008" href="https://www.ultramain.com"           target="_blank">Ultramain</a></li>
+              <li><a data-year="2016" href="https://unglobalpulse.org"           target="_blank">United Nations Global Pulse</a></li>
+              <li><a data-year="2018" href="https://www.tbmcouncil.org"          target="_blank">Technology Business Management Council</a></li>
+              <li><a data-year="2013" href="https://graduate.ucsf.edu"           target="_blank">UCSF Graduate Education</a></li>
+            </ol>
+          </div><!-----------------------------------------------/Active-->
+        </div>
+        <div class="foldable" data-group="projects"><!--------------Inactive-->
+          <div class="summary">Inactive sites</div>
+          <div class="noverflow details">
+            <p class="mt2 mb2">But thankfully available on <em>archive.org</em>:</p>
+            <ol>
+              <li><a data-year="2010" href="https://web.archive.org/web/20170613132938/http://505labs.com/"                          target="_blank">505Labs</a></li>
+              <li><a data-year="2013" href="https://web.archive.org/web/20130805062635/http://www.adchemy.com/"                      target="_blank">Adchemy</a></li>
+              <li><a data-year="2006" href="https://web.archive.org/web/20081222124159/http://www.antibodyservices.net/"             target="_blank">Antibody Services</a></li>
+              <li><a data-year="1997" href="https://web.archive.org/web/19961029075734/http://arya.com/"                             target="_blank">arya.com</a></li>
+              <li><a data-year="2010" href="https://web.archive.org/web/20130527080811/http://www.bahramilaw.com/"                   target="_blank">Bahrami Law Office</a></li>
+              <li><a data-year="2015" href="https://web.archive.org/web/20160613194153/http://www.caprockapartments.com/"            target="_blank">Caprock Apartments</a></li>
+              <li><a data-year="2000" href="https://web.archive.org/web/20001018012211/http://www.cybergold.com/"                    target="_blank">CyberGold Inc.</a></li>
+              <li><a data-year="2018" href="https://web.archive.org/web/20170327214817/https://digitalfuel.com/"                     target="_blank">Digital Fuel</a></li>
+              <li><a data-year="2006" href="https://web.archive.org/web/20081121153011/http://www.dnaladder.com/"                    target="_blank">DNALadder.com</a></li>
+              <li><a data-year="2018" href="https://web.archive.org/web/20180526015545/https://www.fittedcloud.com/"                 target="_blank">Fitted Cloud</a></li>
+              <li><a data-year="2016" href="https://web.archive.org/web/20160306030001/http://www.fuseiq.com/"                       target="_blank">FuseIQ</a></li>
+              <li><a data-year="2003" href="https://web.archive.org/web/20050427234922/http://www.girlsport.net/catalog/"            target="_blank">GirlSport.net</a></li>
+              <li><a data-year="2007" href="https://web.archive.org/web/20120509031616/http://www.hollandlawoffices.net/profile.php" target="_blank">Holland Law Offices</a></li>
+              <li><a data-year="2006" href="https://web.archive.org/web/20060402202230/http://incubatorshaker.com/"                  target="_blank">IncubatorShaker.com</a></li>
+              <li><a data-year="2015" href="https://web.archive.org/web/20161025035447/http://www.jackstahlco.com/"                  target="_blank">Jack Stahl Realtors</a></li>
+              <li><a data-year="2010" href="https://web.archive.org/web/20160306063508/http://jadugaran.com/"                        target="_blank">Jadugaran</a></li>
+              <li><a data-year="2001" href="https://web.archive.org/web/20020407085103/http://www.mirkhah.com/about_site.html"       target="_blank">Mirkhah.com</a></li>
+              <li><a data-year="2010" href="https://web.archive.org/web/20080509065134/http://www.net.com/"                          target="_blank">Net.com</a></li>
+              <li><a data-year="2000" href="https://web.archive.org/web/20000622054744/http://www.nucleotech.com/"                   target="_blank">NucleoTech.com</a></li>
+              <li><a data-year="2013" href="https://web.archive.org/web/20131024051330/https://www.prounausa.com/"                   target="_blank">Prouna USA</a></li>
+              <li><a data-year="2008" href="https://web.archive.org/web/20080906042214/http://www.rocketron.com/"                    target="_blank">Rocketron</a></li>
+              <!--li><a href="https://" target="_blank"></a></li-->
+            </ol>
+          </div><!---------------------------------------------/Inactive-->
+        </div>
+        <div class="foldable" data-group="projects"><!----------Inaccessable-->
+          <div class="summary">Lost to time</div>
+          <div class="noverflow details">
+            <p  class="mt2 mb2">Not archived, screenshots only.</p>
+            <ol class="nonexistant">
+              <li><a href="#projects" onclick="modal(this);" data-year="2008" data-title="Asyncast"   data-src="">Asyncast Corporation</a></li>
+              <li><a href="#projects" onclick="modal(this);" data-year="2009" data-title="FailSafe"   data-total="3" data-code="fs" data-src="https://files.benmirkhah.com/sprites/sprite-failsafe.svg#fs1">FailSafe.com</a></li>
+              <li><a href="#projects" onclick="modal(this);" data-year="2001" data-title="IrisKids"   data-total="3" data-code="ir" data-src="https://files.benmirkhah.com/sprites/sprite-iris.svg#ir1"    >Iris Kids Fashion</a></li>
+              <li><a href="#projects" onclick="modal(this);" data-year="2001" data-title="LaserTouch" data-src="">LaserTouch Printing</a></li>
+              <li><a href="#projects" onclick="modal(this);" data-year="2010" data-title="Playspan"   data-src="">PlaySpan Inc.</a></li>
+              <li><a href="#projects" onclick="modal(this);" data-year="2011" data-title="Saffron"    data-src="">Saffron Group</a></li>
+            </ol>
+          </div><!-------------------------------------------/Inaccessable-->
+        </div>
+      </div>
+      <pre class="">
+          32 active    + 
+          21 inactive  + 
+           6 forgotten +
+           1 this site = <em class="white">60 total sites</em>
+      </pre>
+    </div><!--/projects-text-->
+
+    <div id="designs-text">
+      <h4>Not just a developer</h4>
+      <p>It wasn't long ago when "webmasters" had to design the
+          sites they built, and frankly I still enjoy designing
+          layouts and user interfaces just as much I like coding.
+          Below are a few of my designs, I'm including the date
+          to provide context, because while they may not be fancy 
+          today, they were trendy for their time.
+      </p>
+      <p class="mb1"><sub>Here's a sneak peek into a few of them...</sub></p>
+      <div class="padded img-grid g3 mb3">
+        <img  class="bpr" loading="lazy" onclick="modal(this);"
+              src="https://files.benmirkhah.com/sprites/sprite-prouna.svg#pr1" 
+              data-caption="Prouna USA sold high end dishware"
+              alt="Prouna Frontpage"
+        >
+        <img  class="bpr" loading="lazy" onclick="modal(this);"
+              src="https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab2" 
+              data-caption=""
+              alt="505Labs Planning Page"
+        >
+        <img  class="bpr" loading="lazy" onclick="modal(this);"
+              src="https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd2" 
+              data-caption="Albumbs / EPs / Singles Collection"
+              alt="Jadu Collections Page"
+        >
+      </div>      
+      <div class="foldable" data-group="design"><!-------------------505Labs-->
+        <div class="summary">505Labs &nbsp; <em>(2014)</em></div>
+        <div class="noverflow details">
+          <p class="mt1 mb3">Albuquerque's Drupal web development team.</p>
+          <div class="img-grid g3">
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab1" 
+                  data-title="505LABS" data-code="lab" data-total="6" data-current="1"
+                  data-caption="Frontpage" alt="505Labs Frontpage"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab2" 
+                  data-title="505LABS" data-code="lab" data-total="6" data-current="2"
+                  data-caption="Planing Page" alt="505Labs Planning Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab3" 
+                  data-title="505LABS" data-code="lab" data-total="6" data-current="3"
+                  data-caption="Design Page" alt="505Labs Design Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab4" 
+                  data-title="505LABS" data-code="lab" data-total="6" data-current="4"
+                  data-caption="Marketing Page" alt="505Labs Marketing Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab5" 
+                  data-title="505LABS" data-code="lab" data-total="6" data-current="5"
+                  data-caption="Project Details Page" alt="505Labs Project Details Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab6" 
+                  data-title="505LABS" data-code="lab" data-total="6" data-current="6"
+                  data-caption="About Page" alt="505Labs About Page"
+            >
+          </div>
+        </div><!----------------------------------------------------/505Labs-->
+      </div>
+      <div class="foldable" data-group="design"><!--------------------Prouna-->
+        <div class="summary">Prouna USA &nbsp; <em>(2012)</em></div>
+        <div class="noverflow details">                
+          <p class="mt1 mb3">Online store for a brand of luxury chinaware.</p>
+          <div class="img-grid g3">
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-prouna.svg#pr1"
+                  data-title="Prouna" data-code="pr" data-total="3" data-current="1"
+                  data-caption="Luxury dishware brand" alt="Prouna Frontpage"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-prouna.svg#pr2" 
+                  data-title="Prouna" data-code="pr" data-total="3" data-current="2"
+                  data-caption="Bejeweled collection" alt="Prouna Collections Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-prouna.svg#pr3"
+                  data-title="Prouna" data-code="pr" data-total="3" data-current="3"
+                  data-caption="Jewelry boxes" alt="Prouna Home Decor Page"
+            >
+          </div>
+        </div><!-----------------------------------------------------/Prouna-->
+      </div>
+      <div class="foldable" data-group="design"><!----------------------Jadu-->
+        <div class="summary">Jadugaran &nbsp; <em>(2012)</em></div>
+        <div class="noverflow details">
+          <p class="mt1 mb3">Multilingual site for a music publishing label.</p>
+          <div class="img-grid g3">
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd1"
+                  data-title="Jadu" data-code="jd" data-total="6" data-current="1"
+                  data-caption="Default of 3 languages" alt="English Frontpage"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd2"
+                  data-title="Jadu" data-code="jd" data-total="6" data-current="2"
+                  data-caption="Albumbs / EPs / Singles" alt="Collections Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd3"
+                  data-title="Jadu" data-code="jd" data-total="6" data-current="3"
+                  data-caption="Song information and download" alt="Music Page" 
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd4"
+                  data-title="Jadu" data-code="jd" data-total="6" data-current="4"
+                  data-caption="Artist introduction and details" alt="Artist Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd5"
+                  data-title="Jadu" data-code="jd" data-total="6" data-current="5"
+                  data-caption="Standard email form" alt="Contact Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd6"
+                  data-title="Jadu" data-code="jd" data-total="6" data-current="6"
+                  data-caption="Right-to-left languages" alt="Persian Frontpage"
+            >
+          </div>
+        </div><!-------------------------------------------------------/Jadu-->
+      </div>
+      <div class="foldable" data-group="design"><!------------------FailSafe-->
+        <div class="summary">Fail Safe &nbsp; <em>(2009)</em></div>
+        <div class="noverflow details">
+          <p class="mt1 mb3">Online store for a software securit product.</p>
+          <div class="img-grid g3">
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-failsafe.svg#fs1"
+                  data-title="FailSafe" data-code="fs" data-total="3" data-current="1"
+                  data-caption="Product of Phoenix Technologies" alt="Fail Safe Frontpage"
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-failsafe.svg#fs2"
+                  data-title="FailSafe" data-code="fs" data-total="3" data-current="2"
+                  data-caption="Support Forum" alt="Product Support Page"
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-failsafe.svg#fs3"
+                  data-title="FailSafe" data-code="fs" data-total="3" data-current="3"
+                  data-caption="Enterprise Support Service Plan" alt="Enterprise Page"
+            >
+          </div>
+        </div><!----------------------------------------------------FailSafe-->
+      </div>
+      <div class="foldable" data-group="design"><!------------USI Conference-->
+        <div class="summary">Ultramain &nbsp; <em>(2007)</em></div>
+        <div class="noverflow details">
+          <p class="mt1 mb3">Site for major aviation industry conference.</p>
+          <div class="img-grid g4">
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-ultramain.svg#um1"
+                  data-title="Ultramain" data-code="um" data-total="4" data-current="1"
+                  data-caption="Airline Industry Conference" alt="Frontpage"
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-ultramain.svg#um2"
+                  data-title="Ultramain" data-code="um" data-total="4" data-current="2"
+                  data-caption="Conference Attendance Sign-Up Form" alt="Registration Page" 
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-ultramain.svg#um3"
+                  data-title="Ultramain" data-code="um" data-total="4" data-current="3"
+                  data-caption="Sponsors Sign-Up Form" alt="Sponsors Page"
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-ultramain.svg#um4"
+                  data-title="Ultramain" data-code="um" data-total="4" data-current="4"
+                  data-caption="Post Conference Ratings Survey Form" alt="Survey Page"
+            >
+          </div>
+        </div><!---------------------------------------------/USI Conference-->
+      </div>
+      <div class="foldable" data-group="design"><!--------------------Emails-->
+        <div class="summary">HTML Emails &nbsp; <em>(2007)</em></div>
+        <div class="noverflow details">
+          <p class="mt1 mb3">Due to their restrictive rendering limitations
+            HTML emails are a different ballgame as everything is in a table.
+          </p>
+          <div class="img-grid g4">
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-emails.svg#he1"
+                  data-title="HTML Email" data-code="he" data-total="4" data-current="1"
+                  data-caption="Airline Industry Conference Email" alt="Invite Email"
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-emails.svg#he2"
+                  data-title="HTML Email" data-code="he" data-total="4" data-current="2"
+                  data-caption="Detailed Conference Agenda" alt="Agenda Email" 
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-emails.svg#he3"
+                  data-title="HTML Email" data-code="he" data-total="4" data-current="3"
+                  data-caption="Customer Meetup Email" alt="MRO Email"
+            >
+            <img  class="bps" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-emails.svg#he4"
+                  data-title="HTML Email" data-code="he" data-total="4" data-current="4"
+                  data-caption="KLM Email" alt="KLM Email"
+            >
+          </div>
+        </div><!-----------------------------------------------------/Emails-->
+      </div>
+      <div class="foldable" data-group="design"><!------------------IrisKids-->
+        <div class="summary">IrisKids &nbsp; <em>(2002)</em></div>
+        <div class="noverflow details">                
+          <p class="mt1 mb3">Marketing site for a childern fashion brand.</p>
+          <div class="img-grid g3">
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-iris.svg#ir1"
+                  data-title="Iris Kids" data-code="ir" data-total="3" data-current="1"
+                  data-caption="Custom Content Management System" alt="IrisKids Frontpage"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-iris.svg#ir2" 
+                  data-title="Iris Kids" data-code="ir" data-total="3" data-current="2"
+                  data-caption="Sample Category" alt="Category age"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-iris.svg#ir3"
+                  data-title="Iris Kids" data-code="ir" data-total="3" data-current="3"
+                  data-caption="Detailed Product Information" alt="Product Page"
+            >
+          </div>
+        </div><!---------------------------------------------------/IrisKids-->
+      </div>
+      <div class="foldable" data-group="design"><!---------------------Leaky-->
+        <div class="summary">Leaky Foundation &nbsp; <em>(2000)</em></div>
+        <div class="noverflow details">
+          <p class="mt1 mb3">Site for a donor-supported nonprofit research organization.</p>
+          <div class="img-grid g3">
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk1"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="1"
+                  data-caption="Fellows Section" alt="Fellows Main Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk2"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="2"
+                  data-caption="Fellows Travel Plans" alt="Travel Page" 
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk3" 
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="3"
+                  data-caption="Fellows Events" alt="Events Page"
+            >            
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk4"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="4"
+                  data-caption="Fellowship Donation Plan Levels" alt="Donations Plans Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk5"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="5"
+                  data-caption="Fellowship Donations Form" alt="Sign-Up Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk6"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="6"
+                  data-caption="Showcasing Granteese Worldwide" alt="Granteese Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk7"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="7"
+                  data-caption="Various Granteese Projects Worldwide" alt="Granteese Projects Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk8"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="8"
+                  data-caption="Showcasing Great Works Research" alt="Great Works Project Page"
+            >
+            <img  class="bpr" loading="lazy" onclick="modal(this);"
+                  src="https://files.benmirkhah.com/sprites/sprite-leaky.svg#lk9"
+                  data-title="Leaky" data-code="lk" data-total="9" data-current="9"
+                  data-caption="Gona Great Works Project" alt="Gona Project Page"
+            >            
+          </div>
+        </div><!---------------------------------------------/USI Conference-->
+      </div>
+    </div><!--/designs-text-->
+
+    <div id="iot-text">
+      <h4>I studied electronics</h4> 
+      <p>At a technical high-school, <i>I learned how to</i>   
+          <i>read circuit schematics,</i> <i>solder components,</i>
+          <i>and even make</i> <i>printed circuit boards.</i>
+      </p>
+      <p class="pt2">I started with building electronic kits in my youth, 
+          and later in life got involved with micro devices, first with early Adruinos, 
+          and finally growing into full on <em>systems on a chip</em> 
+          devices that run <em>custom Linux kernels</em> that I compile,  
+          and best off all, I've been fortunate enough to be able to 
+          use and develop these skills throughout my career as well.<br/>
+          <sub class="block pt2">Some of my micro devices and the LED matrix they control...</sub>
+      </p>
+      <div class="padded img-grid gx">
+        <div class="zero">
+          <img  class="bps" loading="lazy" onclick="modal(this);"
+                src="https://media.benmirkhah.com/img/iot-mini.webp" 
+                data-caption="The cute lil' thumb size ESP32-S2 Mini"
+                alt="ESP32-S2-Mini"
+          />
+          <img  class="bps" loading="lazy" onclick="modal(this);"
+                src="https://media.benmirkhah.com/img/iot-esp32-s3.webp"
+                data-caption="Larger ESP32-S3 in comparison with ESP-S2 Mini"
+                alt="ESP32-S3"
+          />
+        </div>
+        <div class="video">
+          <video preload="auto" playsinline autoplay muted loop width="100%" height="100%">
+            <source src="https://media.benmirkhah.com/videos/led-matrix.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <img  class="tall"  loading="lazy" onclick="modal(this);"
+              src="https://media.benmirkhah.com/img/iot-milkv.webp"
+              data-caption="The powerful 1GHz Linux enabled MilkV-Duo-256"
+              alt="MilkV-Duo-256"
+        />
+      </div>
+    </div><!--/iot-text-->
+
+    <div id="mind-text">
+      <h4>Understanding the human mind <i>has been my never ending quest</i></h4>
+      <p class="pb3">
+        Thankfully many of the books that paved my path to knowledge 
+        are now <i><em>freely available</em></i> <i>on YouTube.</i>
+        Included couple of lectures in there too just <i>for a good measure.</i> 
+      </p>
+      <div class="container">    
+        <div class="foldable" data-group="books"><!----------------Various-->
+          <div class="summary"><i>Books by various authors</i></div>
+          <div class="noverflow details">
+            <ul class="mt3">
+              <li><a target="new" href="https://youtu.be/aL43l2SFVWQ">
+                  The Kybalion</a> <sub>by The Three Initiates <em>(1908)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/mtZsILMBfJo">
+                  Surely You're Joking, <i>Mr. Feynman!</i></a> <sub>by Richard Feynman <em>(1985)</em></sub></li>
+              <li><a target="new" href="https://amazon.com/dp/0062503731">
+                  The Way of The Shaman</a> <sub>by Michael Harner <em>(1990)</em></sub></li>
+              <li><a target="new" href="https://youtube.com/playlist?list=PLWK54FioXdFm6FyqqCps7wNTQMcIy6f9B">
+                  Encounters with the Nagual</a> <sub>by Armando Torres <em>(2004)</em></sub></li>
+            </ul>
+          </div>
+        </div>  
+        <div class="foldable" data-group="books"><!--------------Castanada-->
+          <div class="summary"><i>Books by Carlos Castaneda</i></div>
+          <div class="noverflow details">
+            <ol class="mt3">
+              <li><a target="new" href="https://youtu.be/X5MlVq8Jl0s">The Teachings of Don Juan
+                  </a> <sub><em>(1968)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/vYvJno84dJI">A Separate Reality
+                  </a> <sub><em>(1971)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/b0zfdkMYeJU">Journey to Ixtlan
+                  </a> <sub><em>(1972)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/c4FkK_LnHA0">Tales of Power
+                  </a> <sub><em>(1974)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/Pg3qNzJBb5E">The Second Ring of Power
+                  </a> <sub><em>(1977)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/UKWWoU9eYgE">The Eagle's Gift
+                  </a> <sub><em>(1981)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/JYwjXe19GYg">The Fire From Within
+                  </a> <sub><em>(1984)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/CtJVsUhjYok">The Power of Silence
+                  </a> <sub><em>(1987)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/2xfGtWAGk8A">The Art of Dreaming
+                  </a> <sub><em>(1993)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/_mQnFgPfoYU">The Wheel of Time
+                  </a> <sub><em>(1998)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/CSAiCoMAa3s">The Active Side of Infinity
+                  </a> <sub><em>(1999)</em></sub></li>
+            </ol>
+          </div>
+        </div>
+        <div class="foldable" data-group="books"><!---------------Florinda-->
+          <div class="summary"><i>Books by Florinda Donner</i></div>
+          <div class="noverflow details">
+            <ul class="mt3">
+              <li><a target="new" href="https://youtu.be/ewcW1oUp4YU">Shabono
+              </a> <sub><em>(1982)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/jEhEdvMI70U">The Witch's Dream
+              </a> <sub><em>(1985)</em></sub></li>
+              <li><a target="new" href="https://youtu.be/3FwjUJFxAHw">Being-in-Dreaming
+              </a> <sub><em>(1992)</em></sub></li>
+            </ul>
+          </div>
+        </div>        
+        <div class="foldable" data-group="books"><!-----------------Taisha-->
+          <div class="summary"><i>Books by Taisha Abelar</i></div>
+          <div class="noverflow details">
+            <ul class="mt3">
+              <li><a target="new" href="https://youtu.be/BRsUAWs08Eo">The Sorcerers' Crossing
+                  </a> <sub><em>(1992)</em></sub></li>    
+              <li><a target="new" href="https://youtu.be/uMvACRZKFlU">Stalking With The Double
+                  </a> <sub><em>(1998)</em></sub></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foldable" data-group="books"><!---------------Lectures-->
+          <div class="summary"><i>Lectures</i></div>
+          <div class="noverflow details">
+            <p class="mt2 mb2 ml3"><b>Professor Carl Hayden Smith</b></p>
+            <ul>
+              <li><a target="new" href="https://youtu.be/fOnluojOhF8">
+                  Hyperhuman Techniques & Technologies for Regeneration</a></li>
+              <li><a target="new" href="https://youtu.be/Q-ZpSOVDBvQ">Conscience & Hyperhumanism</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!--/mind-text-->
+
+    <div id="chem-text">
+      <h4>It all started with Covid</h4>
+      <p>Just like everyone else I was worried about my family's safety.
+          Covid crystalized the realization of how unprepared we were for such an event.
+          Not only did we not have any anti-viral, anti-bacterial, anti-depressant,
+          anti-inflammatory remedies at our disposal, but the prospect of obtaining them
+          was also grim, as nobody dared to visit a medical office during the pandemic
+          unless they absolutely had to.
+      </p>
+      <p><b>I turned to the internet for a solution</b></p>
+      <p>Soon I learned that parallel to the western medicinal system,
+          a Russian equivalent system exist, essentially for every Asprin 
+          and Prozac there's an Asprinof and Prozacovich available online, 
+          with very similar molecular structure, give or take an extra atom 
+          attached or removed here and there.
+      </p>
+      <p>More interestingly, I learned that currently there are many  
+          new cutting edge <b>experimental medications</b> available, 
+          that for one reason or another have not yet been approved by 
+          the slow and rigorous <i>FDA approval process</i>.
+      </p>
+      <p class="mb2">I've compiled my findings into detailed 
+          <em>spreadsheets</em> that I plan to share here soon!</p>
+    </div><!--/chem-text-->
+
+    <div id="visual-text">
+      <p><em>Been painting all my life</em> <i>here are some examples:</i></p>
+      <div class="img-grid g4 mt2 mb2"><!--Paintings-->
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-art.svg#art1"
+             data-title="Paintings" data-code="art" data-total="4" data-current="1"
+             data-caption="Deev Mask" alt="Deev Mask"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-art.svg#art2"
+             data-title="Paintings" data-code="art" data-total="4" data-current="2"
+             data-caption="Pencil Sketch" alt="Pencil Sketch" 
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-art.svg#art3"
+             data-title="Paintings" data-code="art" data-total="4" data-current="3"
+             data-caption="Drip Trip" alt="Drip Trip"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-art.svg#art4"
+             data-title="Paintings" data-code="art" data-total="4" data-current="4"
+             data-caption="Arizona Cacti" alt="Arizona Cacti" 
+        />
+      </div><!--/Paintings-->
+  
+      <p><em>Learned Photoshop in college</em> <i>just to make album covers:</i></p>
+      <div class="img-grid g4 mt2 mb2"><!--Album Covers-->
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-covers.svg#cv1"
+             data-title="Album Covers" data-code="cv" data-total="4" data-current="1"
+             data-caption="TranceFlow Cover" alt="TranceFlow 2K Album Cover"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-covers.svg#cv2"
+             data-title="Album Covers" data-code="cv" data-total="4" data-current="2"
+             data-caption="First Single" alt="1st Single Cover" 
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-covers.svg#cv3"
+             data-title="Album Covers" data-code="cv" data-total="4" data-current="3"
+             data-caption="Second Single" alt="2nd Single Cover"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-covers.svg#cv4"
+             data-title="Album Covers" data-code="cv" data-total="4" data-current="4"
+             data-caption="Fifth Single" alt="5th Single Cover"
+        />
+      </div><!--/Album Covers-->
+  
+      <p><em>Then learned Illustrator</em> <i>been useful for logo designs:</i></p>
+      <div class="img-grid g4 mt2 mb2"><!--Logos-->
+        <img class="bps" loading="lazy" onclick="modal(this);" 
+             src="https://media.benmirkhah.com/sprites/sprite-logos.svg#lg1"
+             data-title="Logos" data-code="lg" data-total="4" data-current="1"
+             data-caption="Jadu Logo" alt="Jadu Logo"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-logos.svg#lg2"
+             data-title="Logos" data-code="lg" data-total="4" data-current="2"
+             data-caption="Answers Logo" alt="Answers Logo"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-logos.svg#lg3" 
+             data-title="Logos" data-code="lg" data-total="4" data-current="3"
+             data-caption="505LABS Logo" alt="505Labs Logo"  
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-logos.svg#lg4"
+             data-title="Logos" data-code="lg" data-total="4" data-current="4"
+             data-caption="Bionexus Logo" alt="Bionexus Logo" 
+        />
+      </div><!--/Logos-->
+  
+      <p><em>Abstract Love Collection</em> <i>circa 2022:</i></p>
+      <div class="img-grid g4 mt2 mb2"><!--Mehr-->
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-mehr.svg#mh1" 
+             data-title="Abstract" data-code="mh" data-total="4" data-current="1"
+             data-caption="Illustration" alt="Illustration"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-mehr.svg#mh2" 
+             data-title="Abstract" data-code="mh" data-total="4" data-current="2"
+             data-caption="Illustration" alt="Illustration"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-mehr.svg#mh3" 
+             data-title="Abstract" data-code="mh" data-total="4" data-current="3"
+             data-caption="Illustration" alt="Illustration"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-mehr.svg#mh4" 
+             data-title="Abstract" data-code="mh" data-total="4" data-current="4"
+             data-caption="Illustration" alt="Illustration"
+        />
+      </div><!--/Mehr-->
+    </div><!--/visual-text-->
+
+    <div id="tactile-text">
+      <h4>I love making things</h4>
+      <p class="mb2">The mousepad, stickers and CDs were for a conference gift bag,
+        but the garden photos are much better examples, as everything you see
+        was put together by my very own two hands, from planting the flowers, 
+        to installing the wood trimmings, drainage boxes, lights, 
+        and most importantly, laying all the river pebbles.
+      </p>
+      <div class="img-grid g3"><!--Neocase-->
+        <img class="bpr" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-neocase.svg#neo1"
+             data-title="Neocase" data-code="neo" data-total="3" data-current="1"
+             data-caption="Mousepad" alt="Neocase Mousepad"    
+        />
+        <img class="bpr" loading="lazy" onclick="modal(this);"
+              src="https://media.benmirkhah.com/sprites/sprite-neocase.svg#neo2"
+              data-title="Neocase" data-code="neo" data-total="3" data-current="2"
+              data-caption="Sticker" alt="Sticker"
+        />
+        <img class="bpr" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-neocase.svg#neo3"
+             data-title="Neocase" data-code="neo" data-total="3" data-current="3"
+             data-caption="Installation CD" alt="Software CD"
+        />
+      </div><!--/Neocase-->
+      <div class="img-grid g4 mt2 mb2"><!--Garden-->
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-garden.svg#gn1" 
+             data-title="Garden" data-code="gn" data-total="4" data-current="1"
+             data-caption="Pineapple Palm" alt="Pineapple Palm Tree"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-garden.svg#gn2"
+             data-title="Garden" data-code="gn" data-total="4" data-current="2"
+             data-caption="Rock Circle" alt="Rock Garden"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-garden.svg#gn3"
+             data-title="Garden" data-code="gn" data-total="4" data-current="3"
+             data-caption="Roses Section" alt="Rose Garden"
+        />
+        <img class="bps" loading="lazy" onclick="modal(this);"
+             src="https://media.benmirkhah.com/sprites/sprite-garden.svg#gn4"
+             data-title="Garden" data-code="gn" data-total="4" data-current="4"
+             data-caption="Drainage" alt="Garden Drain"
+        />
+      </div><!--/Garden-->
+    </div><!--/tactile-text-->
+
+    <div id="vocal-text">
+      <h4>Well, I started a band in 2007</h4>
+      <p>And before you knew, <i>it grew into a <em>record label.</em></i></p>
+      <p>My vocals are included in over 60 released singles,
+          many of which can be heard on various online music platforms.
+      </p>  
+      <ul>
+        <li><a href="https://youtube.com/jadugaran"   >On YouTube</a></li>
+        <li><a href="https://soundcloud.com/jadugaran">On SoundCloud</a></li>
+        <li><a href="https://facebook.com/jadumusic"  >On Facebook</a></li>
+        <li><a href="https://open.spotify.com/artist/2IDbTr3cQoEO9xG1QZ2VAa">On Spotify</a><sub> (Limited Releases Only)</sub></li>
+      </ul>
+    </div><!--/vocal-text-->
+
+    <div id="svg-text">
+      <h4>Vector vs. Bitmap</h4>
+      <p>Ever since I learned how to use Adobe Illustrator, 
+        I saw how superior vector graphics were to rasterized bitmaps,  
+        in terms of lossless render quality, resolution independence, 
+        and file-size.
+      </p>
+      <p>While browsers took decades to finally adopt the format,
+        somehow it still remains largely underutilized by developers.
+      </p>
+      <p class="mb2">SVG files are my bread and butter for the following reasons...</p>
+      <div class="foldable" data-group="svg"><!--Resolution-->
+        <div class="summary">Resolution Independence</div>
+        <div class="noverflow details">      
+          <p class="mb2">
+            Resolution independence is celebrated every fourth of July,
+            when vectors victoriously defeated the tyranny of pixelation.
+            Jokes aside, what it really means is "one size fits all" as
+            the same SVG displayed at 100 pixels wide can be printed on
+            a 10 feet banner without the pixelation that was the annoying
+            byproduct of the old low-res bitmap images.  
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="svg"><!--Animation-->
+        <div class="summary">Filters & Animation</div>
+        <div class="noverflow details">
+          <p class="mt2">
+            Did you notice the background image animation on this site?
+            I'm not sure if I could've done it as easily using CSS rules 
+            alone, because while CSS animations work great on page elements 
+            their use is not as straight forward on background images.
+            <br/><br/>
+            Filters are another unique feature of SVG because they
+            include some filters that are not available to CSS, and 
+            best of all all the filter parameters can be animated,
+            allowing for creation of visually impressive effects. 
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="svg"><!--Light Weight-->
+        <div class="summary">Light Weight</div>
+        <div class="noverflow details">
+          <p class="mt2">
+            Unlike bitmap images that grow heavier by increasing image size,
+            SVGs don't. This is because all vector objects are made of math 
+            formulas that render the same shape regardless of the image size 
+            so they remain exponentially lighter than their bitmap counterparts.
+            The only exception is when bitmap images are encapsulated inside a
+            SVG file, which is an excellent trick for creating image sprites.
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="svg"><!--Encapsulation-->
+        <div class="summary">Encapsulation</div>
+        <div class="noverflow details">
+          <p class="mt2">
+            SVG files can be used as a container to encapsulate bitmap images.
+            Why you may ask? One good reason is to make a bitmap image fancier
+            by non-destructively adding extra layers of dynamic graphic elements, 
+            for instance "you are here" arrows on a map, or reveal animations, etc. 
+            <br/><br/>
+            Another good reason is to create smart image sprites, why smart? 
+            Because you can name each frame of those sprite images and use
+            the name to summon that exact frame like sprite.svg#cat vs. #dog.
+            I've used this trick to reduce the number of http requests by a 
+            quarter because each stripe contains at least 4 images, hence 
+            reducing page load time. 
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="svg"><!--Symbols-->
+        <div class="summary">Reusable Symbols</div>
+        <div class="noverflow details">
+          <p class="mt2">
+            I once worked for a company that had five unique products
+            each with their own logo, however the logos where cohesive 
+            as they followed a common theme, for instance they all shared
+            the same exact size orange circle around their icon, the same 
+            exact gray dotted line under their text with the same &reg; mark 
+            at the end of each name, so instead of creating 5 seperate SVG
+            files, I created only one, with both the common and the unique
+            parts as indivdual symbols, then using those symbols I created 
+            a smart sprite that could summon each logo with their unique ID. 
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="svg"><!--Customization-->
+        <div class="summary">Customization</div>
+        <div class="noverflow details">
+          <p class="mt2">
+            If the five reasons above didn't fully convince you that SVGs
+            are the best things since sliced wonderbread, I doubt this would 
+            either, but I'm not the type to give up easy, so did you know
+            all elements in SVG files can be fully styles using CSS? All 
+            it takes is assigning a class to the element, even that's not
+            fully necessary if you're hardcore enough with your CSS rule,
+            after all you can always use nth-child if push comes to shove.
+            But the point is, you can customize something that was meant 
+            to be fully customizable from the get go even further, 
+            allowing for creation of responsive logos that render 
+            completely differently depending on the width and height 
+            alloted to them, or logos that change colors depending on
+            light mode / dark mode display preferences, without having
+            to create multiple versions of the graphics. 
+          </p>
+          <p class="mt2">
+            Saveing the best for the last, SVG files can be used inline,
+            as in, their code can be directly inserted inside a page
+            html, hence completely eliminating the need for loading 
+            external resources such as multiple icons, reducing the
+            number of http requests and improving page load performance.
+          </p>          
+        </div>
+      </div>
+    </div><!--/svg-text-->
+
+    <div id="speed-text">
+      <p>
+        <span class="fright right wq ml3 center">
+          <img class="wf clickable" src="https://media.benmirkhah.com/extra/pingdom.webp" alt="Pingdom Perfect Score" loading="lazy" onclick="modal(this);"/>
+          <sub>Pingdom / HubSpot</sub>
+          <img class="wf clickable" src="https://media.benmirkhah.com/extra/hubspot.webp" alt="HubSpot Perfect Score" loading="lazy" onclick="modal(this);"/>
+        </span>
+        <b class="h4 mb2">I'm obsessed with page load times</b>
+        Don't believe me? <i>See how fast this site loads!</i>
+        <br/><br/>
+        <i>Try it on <a href="https://tools.pingdom.com">Pingdom Speed Test</a></i>
+        <br/><br/>
+        <i>Or HubSpot's <a href="https://website.grader.com">Website Grader</a></i>
+        <br/><br/>
+        While at it try some other sites for comparison, and 
+        considering you won't come across perfect scores often,
+        would you like to know my secret for site perfomance? 
+      </p>
+      <div class="foldable" data-group="speed"><!---------Optimized Graphics-->
+        <div class="summary"><i>Optimized Graphics</i></div>
+        <div class="noverflow details">
+          <p class="mt2 mb1"><b>SVG / WEBP / Emojis to the rescue</b></p>
+          <p>I've already evangelized about the benefits of 
+            <a href="#svg">SVG files</a> for icons and illustrations, 
+            but for photo-realistic images the new WEBP standard offers 
+            the best features of both PNG (transparency / lossless compression) 
+            and JPG (lossy compression / small file size) depending on the 
+            use case requirements.
+          </p>
+          <p>An even more clever way to improve page load speed is using
+            standard <a href="https://en.wikipedia.org/wiki/List_of_emojis" target="_blank">
+            unicode emojis</a> for common graphical elements such as arrows, 
+            home, phone or email icons. I used them to distinctively
+            represent each of the four categories of this site, saving
+            on the trouble and the file-size of creating suitable icons,
+            no reason to reinvent the wheel if good wheels already exist. 
+          </p>
+          <p>Lastly, <em>lazy loading</em> of images below the page fold 
+            can make a noticable performance imapct. All these tricks
+            reduce the number of http requests your page needs to perform 
+            before rendering, leading to faster load times and better 
+            user experience.
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="speed"><!------------Minimal Scripts-->
+        <div class="summary"><i>Minimal Scripts</i></div>
+        <div class="noverflow details">
+          <p class="mt2 mb1"><b>No scripts is the best script</b></p>
+          <p class="mb2">There's a trend amongst developers for wanting to use the
+            latest and greatest front-end frameworks, as well as a trend 
+            amongst marketing professionals for wanting to include the 
+            maximum number of analytics and tracking tools they can find 
+            on every single page on a site, regardless of the perfomance 
+            toll. Not every page needs React, vanilla javascript can still
+            go a long way before the need for any framework.
+          </p>
+          <p class="mb2">While as a developer I understand the desire to use the
+            lastest bleeding edge frameworks for their bragging rights
+            on one's resume, I can't be as forgiving towards marketing 
+            professionals, as they know how shaving 100 milliseconds 
+            of latency improves sales by at least 1%, yet they still
+            participate in the self defeating practice of over-scripting
+            their web sites. 
+          </p>
+          <sub class="mb1 block center">Heydon Pickering's opinion of React is funny and enlightening.</sub>
+          <div class="center">
+            <a href="https://youtu.be/BO71b3l22mM?start=19" target="_blank"><img class="youtube" src="https://media.benmirkhah.com/extra/react.webp" alt="What is React?"/></a>
+          </div>
+        </div>
+      </div>
+      <div class="foldable" data-group="speed"><!-------------Load Balancing-->
+        <div class="summary"><i>Load balancing</i></div>
+        <div class="noverflow details">
+          <p class="mt2 mb1"><b>Multiple servers cut download time</b></p> 
+          <p>Keeping your code and visual assets on separate servers 
+            will also improve your site performance, and this is where 
+            having a dynamic web infrastructure can really shine. 
+            This website is hosted on AWS, and with Route52 it's so
+            easy to create <em>subdomains</em> like files.yourdomain.com
+            to divide the bandwidth heavy task of serving large files between 
+            a multitude of servers, and avoid slowing down the main web server.
+          </p>
+        </div>
+      </div>
+    </div><!--/speed-text-->
+
+    <div id="freedom-text">
+      <h4>Freedom from prohibitionist policies</h4>
+      <p>Today one can walk into a hardware store and buy a jug 
+          of pesticide, no questions asked, and that rat poison 
+          can easily kill a small village in the hands of a maniac.
+      </p>
+      <p>But what one can't do today, is to walk into a pharmacy 
+          and buy antibiotics. To do that, we must first call a 
+          doctor, wait a few weeks for the next available appointment, 
+          pay for the visit, and even then there are no guarantees 
+          if the prescription gets issued! Some doctors who may
+          know their patient for only few minutes can play God by 
+          withholding their cure, which can turn a simple sinus 
+          infection into pneumonia, or worse yet, sepsis if left untreated.
+      </p>
+      <div class="foldable" data-group="freedom">
+        <div class="summary">The tip of the iceberg</div>
+        <div class="noverflow details">      
+          <p class="mb2">So far that was just the tip of the iceberg, 
+              when life saving antibiotics are so hard to obtain, 
+              imagine how difficult it is to get restricted prescriptions, 
+              let's say ADHD meds or pain killers, for those seeking such 
+              remedies for their condition. Many doctors simply aren't 
+              even allowed to prescribe certain medications because
+              their clinic or liability insurer have specific policies
+              forbidding them, for instance Spravato nasal spray, 
+              an antidepressant.
+          </p>
+        </div>
+      </div>    
+      <div class="foldable" data-group="freedom">
+        <div class="summary">The absurdity of prohibition</div>
+        <div class="noverflow details">
+          <p class="mt2">The insanity of the prohibition story gets 
+              even more absurd with some of the scheduled compounds. 
+              Every night when we fall sleep in our bodies we
+              produce indigenous dimethyl tryptamine, a compound
+              responsible for our ability to have visually realistic 
+              dreams, yet that same molecule that we all safely 
+              produce and consume on nightly basis is federally 
+              banned by the DEA!
+          </p>
+          <p>While living in Seattle, every fall during the cool
+              rainy season "wavy caps" mushrooms grew wild in our
+              yard and in many outdoor parks, but if anyone picked
+              them and ate them they'd be committing a felony due
+              the psilocybin they contain, which is also banned by DEA. 
+              Yet there are no laws for death caps or any other 
+              fatally poisonous fungi.
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="freedom">
+        <div class="summary">The cause and the solution</div>
+        <div class="noverflow details">
+          <p class="mt2">All these prohibitionist policies are
+              the result of sensationalized fear, enshrined into  
+              law by people without any first hand knowledge or
+              experience with what they've banned.
+          </p>
+          <p>I don't ski and I don't ride horses,
+              and every year I hear stories about people 
+              losing their lives or getting seriously injured 
+              while on the slopes, or riding horses, ATVs, etc.
+              Yet we don't ban these activities based on the
+              bad luck, poor decisions or irresponsible actions
+              of those involved in the reported incidents.
+          </p>
+          <p>I hope to witness the day when responsible 
+              adults can be free to ingest whatever they
+              desire without the fear of prosecution by
+              law or the stigmatization of our society, 
+              and organizations like 
+              <a href="https://maps.org" target="new">MAPS</a> 
+              are at the forefront of such efforts.
+          </p> 
+        </div>
+      </div>
+      <div class="foldable" data-group="freedom">
+        <div class="summary">In conclusion</div>
+        <div class="noverflow details">
+          <p class="mt2">Perhaps we can learn from Mexico, where most 
+              prescription medications are sold over the counter, 
+              yet they have a lower addiction rate and homelessness
+              per capita than united states. When the responsibilty
+              of restraint and self control rests on the
+              individual's shoulders and not the government's,
+              people generally tend to follow the mankind's 
+              inherent self-preservation rule we are born with,
+              and that's all I need to advocate about.
+          </p>
+        </div>
+      </div>
+  
+    </div><!--/freedom-text-->
+
+    <div id="random-text">
+      <h4>Life is supposed to be fun</h4>
+      <p class="mb3">While not all of them, here are some things I find fun...</p>
+      <div class="foldable" data-group="random"><!------Open Source Software-->
+        <div class="summary">Open Source Software</div>
+        <div class="noverflow details">
+          <p class="mt2">You know what's not fun? 
+              <i>Reinventing the damn wheel!</i><br/>
+              Which is why why starting a software project 
+              <i>from scratch can be so daunting.</i>
+          </p>      
+          <p>As a developer, I'm a huge advocate for using open source projects. 
+              There's nothing more fun than getting an idea, then looking through
+              <a target="new" href="https://www.github.com/benmirkhah">Github</a> 
+              to see if any related code for it already exists, 
+              and even if it's not exactly what we wished for, 
+              it'll be a great starting point for getting that 
+              idea off the ground at the very least.
+          </p>
+          <p>When I first started my software career Github didn't exist, 
+              during those dark days I was forced to start from scratch,
+              including creating my own content management system, and while educational,
+              it didn't have a fraction of the bells and whistles that came standard with
+              <a target="new" href="https://www.drupal.org/u/benmirkhah">Drupal</a>
+              which I later opted for.
+          </p>
+          <p>Open source is the main reason why software quality has improved 
+              so dramatically ever since Github showed up, or why AI apps have 
+              made such huge leaps in the past few years, simply put, people's 
+              work can inspire others.
+          </p>
+        </div>
+      </div>
+      <div class="foldable" data-group="random"><!----------Chinese Checkers-->
+        <div class="summary">Chinese Checkers</div>
+        <div class="noverflow details">
+          <p class="mt2">Speaking of fun, if you love board games 
+              (and I hope <i>you do),</i> I'm here to argue that 
+              <a target="new" href="https://en.wikipedia.org/wiki/Chinese_checkers"><i>Chinese Checkers</i></a>
+              is the single greatest board game of all times, 
+              and I come prepared with reasons to back my wild claim! 
+          </p>     
+          <ol class="pt2">
+            <li><em>Easy to learn</em>
+                <span class="wef pb2">Trying to teach your little nephew Chess or Monopoly? 
+                Good luck with that, but most kids already know checkers,
+                and if you know that you already know how to play CC.</span> 
+            </li>
+            <li><em>Zero to hero in no time</em>
+                <span class="wef pb2">Unlike Chess or Monopoly that need some practice
+                before you score your first win, beginners luck can turn any CC newb 
+                into a winner.</span>
+            </li>
+            <li><em>Perfect mix of Luck vs. Strategy</em>
+                <span class="wef pb2">If Chess is 90% skills and 10% luck 
+                (aka, when your opponent makes mistakes),
+                and Backgammon is 50% skills and 50% luck, 
+                CC sits right on that sweet spot between 75% skills, 25% luck.</span>
+            </li>
+            <li><em>Enjoyable by up to six players</em>
+                <span class="wef">Chess or Backgammon can only entertain two people, 
+                <i>but not CC.</i></span>
+            </li> 
+          </ol>
+        </div>
+      </div>
+    </div><!--/random-text-->
+
+  </div><!--/HIDDEN-->
+</body>
+
+<script>
+  var debug  = 0;     //1: basic, 2: introvert, 3: verbose, 4: extrovert 7: mobile
+  var isopen = false; //Global modal state
+  var nohash = true;  //Check for url hash only once
+  var nothin = null;  //Useless temp var for debugging
+  const url  = window.location //Need to get the #hash
+  const hash = (url.hash) ? url.hash.slice(1) : 0; //Remove the starting '#' character
+  const clix = document.getElementById('clix');  //Footer menu bar
+  const dbox = document.getElementById('debug'); //Debug box on frontpage
+  const windowWidth  = (window.innerWidth  || document.documentElement.clientWidth );
+  const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  showDebugInfo();
+
+  class CatSection extends HTMLElement { //Catagory Pages Web Component
+    connectedCallback() {
+      let id       = this.getAttribute("id")       || uniqueID();
+      let cat      = this.getAttribute("cat")      || "int";
+      let name     = this.getAttribute("name")     || "Category";
+      let emoji    = this.getAttribute("emoji")    || "♥️";
+      let emojihex = this.getAttribute("emojihex") || "&#x2665;&#xfe0f;";
+      let heading  = this.getAttribute("heading")  || "Important Heading";
+      let linx     = this.getAttribute("linx")     || '[["Top","#top"],["Link","#url1"],["End","#end"]]';
+      let boxtype  = this.getAttribute("boxtype")  || "blurb";
+      let boxtext  = document.getElementById(`${id}-text`);
+      let linxHTML = "";
+      let boxHTML  = "";
+
+      linx = JSON.parse(linx);
+   
+      for (const link of linx) { //console.log(link);
+        let target = (link[1].charAt(0) == "#") ? '' : 'target="_blank"'; //External links in new tab
+        linxHTML += `<li class="${cat}"><a href="${link[1]}" ${target}>${link[0]}</a></li>\r\n`;
+      }
+
+      if (boxtext) { boxHTML += '<div class="' + boxtype + '">' + boxtext.innerHTML + '</div>'; }
+      else         { boxHTML += '<!--section-has-no-text-box-->'; }
+
+      this.innerHTML = `
+        <section id="sec-${id}" class="${cat} cat" data-secid="${cat}"><!--${emoji}${name}-->
+          <h2 class="emoji" alt="${emoji}">${emojihex}</h2>
+          <main>
+            <h2>${name}</h2>
+            <h3 class="big mt2">${heading}</h3>
+            <menu class="linx">
+              ${linxHTML}
+            </menu>
+            ${boxHTML}
+          </main>
+        </section><!--/${name}-->
+        `;
+    }
+  } 
+
+  class SubSection extends HTMLElement { //Content Pages Web Component
+    connectedCallback() {
+      let id       = this.getAttribute("id")       || uniqueID();
+      let cat      = this.getAttribute("cat")      || "int";
+      let name     = this.getAttribute("name")     || "Category";
+      let emoji    = this.getAttribute("emoji")    || "♥️";
+      let heading  = this.getAttribute("heading")  || "Conent Title";
+      let boxtype  = this.getAttribute("boxtype")  || "blurb";
+      let boxtext  = getBoxText(id);
+
+      this.innerHTML = `
+        <section id="sec-${id}" class="${cat} sub" data-secid="${cat}"><!--${emoji}${name}-->
+          <h3><b>${name}:</b> ${heading}</h3>
+          <main>
+            <div class="${boxtype}">
+              ${boxtext.innerHTML}
+            </div>
+          </main>
+        </section><!--/${name}-->
+        `;
+    }
+  } 
+
+  function uniqueID(n = 7) { return (Math.random() + 1).toString(36).substring(n); }
+
+  function uniqueString(length = 5) { //Creates fake words for our fake Lorem Ipsum
+    const charset = 'abcdefghijklmnopqrstuvwxyz';
+    let randomString = '';
+
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charset.length);
+      randomString += charset[randomIndex];
+    } //console.log(randomString);
+
+    return randomString;
+  }
+  
+  function lorem(wordCount = 30) { //Fake Lorem Ipsum
+    let paragraph  = "Lorem";
+    for (let index = 0; index < wordCount; index++) {
+      paragraph += " " + uniqueString(Math.floor((Math.random()*8) + 2.4));
+    } //console.log(paragraph);
+    return paragraph + ".";
+  }
+
+  function getBoxText(id = "developer") { //Get the actual content for our web components
+    let boxtext = document.getElementById(`${id}-text`);
+    if (!boxtext) {
+      let faketext = document.createElement("div"); 
+      faketext.innerHTML = "<p id='fake-"+uniqueID()+"'><p>"+lorem()+"</p><p>"+lorem()+"</p>";
+      boxtext = faketext;
+    }
+    return boxtext;
+  }
+
+  function once(fn, context) { //Gool old friend from JQuery days
+    let result = null; //Store the result of the function call
+    return function() {
+      if (fn) {
+        result = fn.apply(context || this, arguments);
+        //console.log("Once called", fn.name, "with args:", arguments, "result:", result);
+        fn = null; //Dereference the function to prevent further calls
+      }
+      return result;
+    };
+  }
+
+  function modal(element) { //Toggle modal state to display a single image or image sets 
+    const modalBox = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    
+    if (isopen) { //If modal box is open just close it
+      modalBox.classList.remove('active');
+      modalBox.classList.add('inactive');
+      modalImg.src = 'tv.svg' //Hard reset
+      isopen = false;
+    } else {    
+      const modalPrev    = document.getElementById('modal-prev');
+      const modalNext    = document.getElementById('modal-next');
+      const modalTitle   = document.getElementById('modal-title');
+      const modalCaption = document.getElementById('modal-caption');
+      //Copy the element's attributes to the modal
+      modalImg.src           = element.dataset.src     || element.src || "https://media.benmirkhah.com/benmirkhah.webp"; 
+      modalTitle.innerText   = element.dataset.title   || element.alt || "BEN WHO?";
+      modalCaption.innerText = element.dataset.caption || "Click on image to close";
+
+      showDebugInfo("Modal source:  " + modalImg.src);
+      showDebugInfo("Modal title:   " + modalTitle.innerText);
+      showDebugInfo("Modal caption: " + modalCaption.innerText);
+
+      let current = Number(element.dataset.current || 1);
+      let total   = Number(element.dataset.total   || 1);
+      let code    = element.dataset.code || 'num';
+
+      showDebugInfo("Modal current: " + current);
+      showDebugInfo("Modal total:   " + total  );
+      showDebugInfo("Modal code:    " + code   );
+      
+      if ( total > 1 ) { //Show Prev / Next icons only for image sets 
+        modalPrev.classList = ( current > 1     ) ? "useful" : "useless"; 
+        modalNext.classList = ( current < total ) ? "useful" : "useless";
+
+        if ( current > 1 ) {
+          prevSrc = modalImg.src;
+          prevSrc = prevSrc.substring(0, prevSrc.lastIndexOf("#")) + "#" + code + (current - 1);
+          showDebugInfo("Modal prev:    " + prevSrc);
+          modalPrev.dataset.src     = prevSrc;
+          modalPrev.dataset.current = current - 1;
+          modalPrev.dataset.total   = total;
+          modalPrev.dataset.code    = code;
+          modalPrev.dataset.title   = modalTitle.innerText;
+        } 
+
+        if ( current < total ) {
+          nextSrc = modalImg.src;
+          nextSrc = nextSrc.substring(0, nextSrc.lastIndexOf("#")) + "#" + code + (current + 1);
+          showDebugInfo("Modal next:    " + nextSrc);
+          modalNext.dataset.src     = nextSrc;
+          modalNext.dataset.current = current + 1;
+          modalNext.dataset.total   = total;
+          modalNext.dataset.code    = code;
+          modalNext.dataset.title   = modalTitle.innerText;
+        }
+
+      } else { //Hide Prev / Next for single images
+        modalPrev.classList = "invis";
+        modalNext.classList = "invis";
+      }
+
+      //Make modal box visible
+      modalBox.classList.remove('inactive');
+      modalBox.classList.add('active');
+      isopen = true;
+    }
+  }
+  
+  async function loadFont(fname, furl, fstyle) {
+    const font = new FontFace( fname, 'url("'+furl+'")', fstyle); 
+    document.fonts.add(font);      //Add font to document
+    await font.load().then(() => { //Wait for font to be loaded
+      document.body.classList.add(fname); //Add font name class
+    },(err) => {
+      console.error(err);
+    });
+  }
+
+  function updateMode(depechemode) { //change mode fast 
+    const mightyH1  = document.querySelector('h1')
+    const selectors = document.querySelectorAll('.selector input')
+    selectors.forEach(selector => { //console.log(selector.value);
+      selector.checked = (selector.value === depechemode) ? true : false; 
+    });
+
+    document.body.classList = depechemode;
+
+    if (depechemode == "depeche") { //Switch to Depeche Fonts
+      mightyH1.innerHTML = "DEPECHE WHO?" //Dumb but funny!
+
+      let fontName  = "SOFAD";
+      let fontURL   = 'fonts/devotion.ttf';
+      let fontStyle = { style: "normal", weight: "400" };
+      loadFont(fontName, fontURL, fontStyle);
+
+      fontName  = "DotMatrix";
+      fontURL   = 'fonts/dotmatrix.ttf';
+      fontStyle = { style: "normal", weight: "400" };
+      loadFont(fontName, fontURL, fontStyle);
+
+      fontName  = "Remixes";
+      fontURL   = 'fonts/remixes.ttf';
+      fontStyle = { style: "normal", weight: "400" };
+      loadFont(fontName, fontURL, fontStyle);
+    } else {
+      mightyH1.innerHTML = "BEN WHO?"
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) { //Loop through the sections
+      const secID  = entry.target.dataset.secid; //Get the section id from the data attribute
+      const secBtn = document.getElementById(`${secID}btn`); //Select the right section button
+      nothin = (debug > 3) ? console.log('secID: ' + secID ) : null;
+      nothin = (debug > 3) ? console.log(secBtn ) : null;
+      
+      //If page is loaded with #section in url highlight the active section's button
+      if ( nohash ) { //We have not checked for hash yet?
+        if ( hash ) { //Do we have something in url hash?
+          nohash = false; //Don't look for hash any more
+          let hashSection = document.getElementById(`sec-${hash}`); //See if the section exists
+          nothin = (debug > 2) ? console.log(hashSection) : null;
+
+          if (hashSection) {
+            let hashSecID = hashSection.dataset.secid;
+            nothin = (debug > 1) ? console.log("hashSecID: "+hashSecID) : null;
+            
+            if (hashSecID) {
+              let activeBtn = document.getElementById(`${hashSecID}btn`);
+              nothin = (debug > 2) ? console.log(activeBtn) : null;
+              
+              activeBtn.classList.add('active');
+              activeBtn.classList.add(hashSecID);
+              nothin = (debug > 1) ? console.log(activeBtn.classList) : null;
+              
+              clix.classList.add('active');               
+              nothin = (debug > 1) ? console.log(clix.classList) : null;
+
+              window.location.assign(url.hash); //Go to the active section
+              break; //Don't look for the active section no more
+            } 
+          }
+        }      
+        
+        //Show menu when reload happens half way down the page with no active #section
+        nothin = (debug > 3) ? console.log(window.scrollY) : null;
+        if ( window.scrollY >= ( windowHeight ) ) { 
+          clix.classList = 'active';
+        }
+      }
+
+      if (entry.isIntersecting) {
+        nothin = (debug > 0) ? console.log(entry.target.id, "is in view!") : null;
+        clix.classList = (entry.target.id == "sec-intro") ? 'intro' : 'active';
+        entry.target.classList.add('inview');
+        secBtn.classList.add('active');
+        secBtn.classList.add(secID); //Used for active button color indicator
+        entry.target.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        nothin = (debug > 1) ? console.log(entry.target.id, "went out!") : null;
+        entry.target.classList.remove('inview');
+        secBtn.classList.remove('active');
+        secBtn.classList.remove(secID);
+      }  
+    }
+
+    //TODO: For super long sections that don't satisfy the 50% observer threshold???
+  },{
+    root: null,
+    scrollMargin: '0%',
+    threshold: 0.5, //Trigger if at least 50% of element in viewport
+  });
+
+  function showDebugInfo( info = windowWidth + ' x ' + windowHeight ) {
+    if (hash == "debug") { 
+      dbox.classList = "block";
+      dbox.innerHTML += info + '<br/>';
+    }
+
+    if (debug) {
+      console.log(info);
+
+      //nothin = (debug > 1) ? console.log('  hash: ' + hash        ) : null;
+      //nothin = (debug > 1) ? console.log('   url: ' + url         ) : null;
+      //nothin = (debug > 2) ? console.log(clix) : null;
+    }
+  }
+
+  function enableFoldables() { //On summary clicks open/close foldables
+    const summaries = document.querySelectorAll('.summary');
+    nothin = (debug > 3) ? console.log(summaries) : null;
+    summaries.forEach(summary => {
+      summary.addEventListener('click', () => { //First find its parent foldable
+        let parent = summary.parentElement;
+
+        if (parent.classList.contains('open')) { //Already open?
+          parent.classList.remove('open');       //Just close it
+        } else {                                 //Not open?
+          if (parent.dataset.group) { //If parent belongs to a foldable group then close others
+            let foldables = document.querySelectorAll(".foldable[data-group='"+parent.dataset.group+"']");
+            foldables.forEach(foldable => { foldable.classList.remove('open'); });
+          }
+          parent.classList.add('open'); //Now that others in the group are closed open self
+        }
+      });
+    }); //Bind to all foldable summary titles
+  }
+
+  const initializeApp = once(function() {//Run once on page load
+    //First create our web component sections
+    customElements.define("cat-section", CatSection);
+    customElements.define("sub-section", SubSection);
+
+    enableFoldables(); //Make <details> replacements work
+
+    //When any section comes into view activate their coresponding menu button 
+    const sections = document.querySelectorAll('section');       //Select all the sections 
+    sections.forEach(section => { observer.observe(section); }); //Observe all the sections
+    nothin = (debug > 1) ? console.log(sections) : null;   
+      
+    console.log("Site initialized" + ((hash) ? " with #" + hash : "!" ));
+    return "Great success!";
+  }, this);
+
+  window.addEventListener('load', initializeApp); //Initialize app on load
+
+  //document.getElementById('svganimid').beginElement();
+</script>
+</html><!--Copyright Ben Mirkhah, all rights reserved-->

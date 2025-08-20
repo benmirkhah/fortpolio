@@ -10,16 +10,7 @@
   --uint: hsl( 25,99%,80%);  --xint: hsl( 25,99%,60%);  --lint: hsl( 25,99%,50%);  --mint: hsl( 25,99%,40%);  --dint: hsl( 25,99%,30%);  --bint: hsl( 25,99%,20%);  --kint: hsl( 25,99%,15%);
   --usun: hsl( 50,99%,80%);  --xsun: hsl( 50,99%,70%);  --lsun: hsl( 50,99%,60%);  --msun: hsl( 50,99%,50%);  --dsun: hsl( 50,99%,40%);  --bsun: hsl( 50,99%,30%);  --ksun: hsl( 50,99%,15%);
   --udep: hsl(262,65%,70%);  --xdep: hsl(262,65%,60%);  --ldep: hsl(262,65%,50%);  --mdep: hsl(262,65%,40%);  --ddep: hsl(262,65%,30%);  --bdep: hsl(262,65%,20%);  --kdep: hsl(262,65%,15%);
-
-  /* Breakpints */
-  --bp0:  360px;
-  --bp1:  480px;
-  --bp2:  640px;
-  --bp3:  720px;
-  --bp4:  960px;
-  --bp5: 1280px;
-  --bp6: 1440px;
-  --bp7: 1920px;
+  
   --bpc:  370px; /* current break point at any moment */
 
   /* Practical Adjustable Fonts and Line Heights */
@@ -54,7 +45,7 @@
   --vs-max:  16px;  --hs-max:     3vw;
   --vs-xlg:  24px;  --hs-xlg:     4vw;
   --vs-xxl:  32px;  --hs-xxl:     5vw;
-  --img-sp:  10px;
+  --img-sp:  10px;  /* image spacer */
 
   /* Default Colorful Mode */
   --mbm-emoji:   overlay;  /* Emoji Mix Blend Mode */
@@ -111,8 +102,8 @@
     font-family: 'HeaderFont';    
     src: url('./fonts/antonio.woff2') format('woff2');
     unicode-range:  U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, 
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, 
-    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, 
+                    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     font-weight: 100 700;  font-display: swap;  font-style: normal; font-optical-sizing: auto;
   }
 
@@ -133,7 +124,7 @@
                     U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     font-weight: 400 700;  font-display: swap;  font-style: normal; font-optical-sizing: auto;
   }
-} /* /woff2 */
+} /* /woof woof, aka woff2 */
 
 /****************************************************** Site Wide Containers */
 *, html { 

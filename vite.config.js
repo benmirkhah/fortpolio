@@ -8,7 +8,7 @@ export default defineConfig({
     https: true,
     port: 443,
     host: 'lh.benmirkhah.com',
-    origin: 'http://lh.benmirkhah.com',
+    origin: 'https://lh.benmirkhah.com',
   },
   plugins: [injectHTML(),mkcert()],
 });
